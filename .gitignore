@@ -1,0 +1,32 @@
+# Maven ve Gradle tarafından oluşturulan dizinler
+/target/
+/build/
+
+# Eclipse tarafından oluşturulan dosyalar ve klasörler
+/.metadata/
+/.classpath
+/.project
+/.settings/
+
+# IntelliJ IDEA tarafından oluşturulan dosyalar ve klasörler
+/.idea/
+
+# Visual Studio Code tarafından oluşturulan dosyalar ve klasörler
+/.vscode/
+
+# macOS tarafından oluşturulan dosyalar
+.DS_Store
+
+# IDE'ye özel dosyalar
+*.iml
+*.ipr
+*.iws
+
+# Yerel yapılandırma dosyaları (örneğin, application.properties)
+application*.properties
+
+# Derlenmiş dosyalar
+*.class
+
+# Log dosyaları
+*.log
