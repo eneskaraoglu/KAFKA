@@ -1,0 +1,29 @@
+package com.kafka.first;
+
+import java.util.HashMap;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class FirstController {
+	
+	@GetMapping("/firstrt")
+	public String  getFirst() {
+		
+		System.out.println("First ");
+		
+
+		ResponseEntity<String> responseEntity = new RestTemplate().
+				getForEntity("http://localhost:8200/second", String.class);
+		
+		String returnVal = responseEntity.getBody();
+		
+		return returnVal;  
+		
+	}
+
+}

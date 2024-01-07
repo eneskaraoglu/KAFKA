@@ -1,0 +1,7 @@
+package com.kafka.secondKafka;
+
+@Configuration
+@EnableKafka
+public class KafkaConfig {
+    // Kafka yapılandırma ayarları burada yapılabilir
+}

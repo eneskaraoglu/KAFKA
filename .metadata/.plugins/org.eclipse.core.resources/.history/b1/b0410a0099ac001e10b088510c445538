@@ -1,0 +1,21 @@
+package com.kafka.first;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FirstController {
+	
+	@GetMapping("/first/{from}/to/{to}")
+	public String  getFirst(
+			@PathVariable String from, 
+			@PathVariable String to) {
+		
+		System.out.println("First /from:"+from+"/to:"+to);
+		
+		return "First /from:"+from+"/to:"+to;  
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.kafka.second;
+
+import java.util.Iterator;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SecondController {
+	
+	@GetMapping("/second")
+	public String  getSecond(
+			@PathVariable String from, 
+			@PathVariable String to) {
+		
+		System.out.println("Second");
+		
+        // Belirli bir süre boyunca işlem yapacak döngü
+        long baslangicZamani = System.currentTimeMillis(); // Şu anki zamanı al
+        while (System.currentTimeMillis() - baslangicZamani < 5000) {
+            // 5000 milisaniye (5 saniye) boyunca döngü devam edecek
+            // Burada herhangi bir işlem yapılabilir, ancak şu örnekte sadece döngüyü çalıştırıyoruz
+        }
+
+        System.out.println("Döngü bitti.");
+        
+		return "Second Döngü bitti.";  
+		
+	}
+
+}

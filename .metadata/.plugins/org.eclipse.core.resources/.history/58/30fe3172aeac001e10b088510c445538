@@ -1,0 +1,5 @@
+# Kafka broker
+spring.kafka.bootstrap-servers=your-kafka-broker:9092
+
+# (consumer) 
+spring.kafka.consumer.group-id=my-consumer-group

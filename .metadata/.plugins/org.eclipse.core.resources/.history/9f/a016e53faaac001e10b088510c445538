@@ -1,0 +1,14 @@
+package com.kafka.first;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class KafkaConsumerService {
+
+    @KafkaListener(topics = "your-topic-name", groupId = "your-consumer-group")
+    public void listen(String message) {
+        // Mesaj işleme işlemleri burada yapılır
+        System.out.println("Received message: " + message);
+    }
+}

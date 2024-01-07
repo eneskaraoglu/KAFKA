@@ -1,0 +1,19 @@
+package com.kafka.second;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+public class SecondController {
+	
+	@GetMapping("/second/{from}/to/{to}")
+	public String  getSecond(
+			@PathVariable String from, 
+			@PathVariable String to) {
+		
+		System.out.println("Second /from:"+from+"/to:"+to);
+		
+		return "Second /from:"+from+"/to:"+to;  
+		
+	}
+
+}
