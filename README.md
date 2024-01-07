@@ -1,5 +1,5 @@
 # KAFKA
-Basic tow spring boot project connect with kafka.
+Basic two spring boot project connect with kafka.
 
 http://localhost:8100/sendkafka/notforkafka
 
